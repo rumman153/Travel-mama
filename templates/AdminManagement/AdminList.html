@@ -1,0 +1,15 @@
+
+{% extends 'base.html' %}
+
+{% block content %}
+
+    {% for a in Admins %}
+        <h2>Admin info:  {{ a.id }} </h2>
+        {{ a.Admin_name }} <br>
+        {{ a.Admin_email}} <br>
+        {{ a.Admin_contact}} <br>
+
+
+    {% endfor %}
+
+{% endblock content %}
