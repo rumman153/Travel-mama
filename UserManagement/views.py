@@ -6,6 +6,6 @@ from .models import User
 def showUser(request):
     UserList = User.objects.all()
     context = {
-        'user': UserList
+        'User': UserList
     }
     return render(request, 'UserManagement/UserList.html', context)

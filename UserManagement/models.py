@@ -6,3 +6,6 @@ class User(models.Model):
     User_email = models.EmailField(max_length=100,unique=True)
     Gender = models.CharField(max_length=50)
 
+    def __str__(self):
+        return self.User_name
+
