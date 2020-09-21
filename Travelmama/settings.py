@@ -39,7 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     'AdminManagement.apps.AdminmanagementConfig',
-    'UserManagement.apps.UsermanagementConfig'
+    'UserManagement.apps.UsermanagementConfig',
+    'CommentManagement.apps.CommentmanagementConfig'
 ]
 
 MIDDLEWARE = [

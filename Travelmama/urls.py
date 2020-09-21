@@ -18,10 +18,12 @@ from django.urls import path
 
 from AdminManagement import views as admin_views
 from UserManagement import views as user_views
+from CommentManagement import views as comment_views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('adminlist/', admin_views.showAdmin, name='Admin'),
-    path('user/', user_views.showUser, name='User')
+    path('user/', user_views.showUser, name='User'),
+    path('comment/', comment_views.showComment, name='Comment')
 
 ]
