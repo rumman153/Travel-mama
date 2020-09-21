@@ -40,7 +40,9 @@ INSTALLED_APPS = [
 
     'AdminManagement.apps.AdminmanagementConfig',
     'UserManagement.apps.UsermanagementConfig',
-    'CommentManagement.apps.CommentmanagementConfig'
+    'CommentManagement.apps.CommentmanagementConfig',
+    'PostManagement.apps.PostmanagementConfig'
+
 ]
 
 MIDDLEWARE = [
