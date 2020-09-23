@@ -5,11 +5,12 @@
 
     {% for p in Post %}
         <h2>Post info:  {{ p.id }} </h2>
-        {{ p.Post_title }} <br>
-        {{ p.Post_location}} <br>
-        {{ p.Post_catagory}} <br>
-        {{ p.Post_tags}} <br>
-        {{ p.Post_description}} <br>
+        Post Name: {{ p.Post_title }} <br>
+        Post By: {{ p.User.User_name }} <br>
+        Location: {{ p.Post_location}} <br>
+        Post Category: {{ p.Post_catagory}} <br>
+        Post Tags:{{ p.Post_tags}} <br>
+        Post Description: {{ p.Post_description}} <br>
 
 
 
