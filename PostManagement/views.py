@@ -6,6 +6,6 @@ from .models import Post
 def showPost(request):
     postList = Post.objects.all()
     context = {
-        'post': postList
+        'Post': postList
     }
     return render(request, 'PostManagement/PostList.html', context)
