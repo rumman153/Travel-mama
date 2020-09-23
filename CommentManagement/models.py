@@ -8,3 +8,6 @@ class Comment(models.Model):
 
     User = models.ForeignKey(User, on_delete=models.SET_NULL, null=True)
     Post = models.ForeignKey(Post, on_delete=models.SET_NULL, null=True)
+
+
+
