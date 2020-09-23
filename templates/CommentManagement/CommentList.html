@@ -5,7 +5,9 @@
 
     {% for c in Comment %}
         <h2>Comment:  {{ c.id }} </h2>
-        {{ c.Comment_description }} <br>
+        Name: {{ c.User.User_name }} <br>
+        Post: {{ c.Post.Post_title }} <br>
+        Comment: {{ c.Comment_description }} <br>
 
 
     {% endfor %}
