@@ -25,14 +25,24 @@ from PostManagement import views as post_views
 
 
 urlpatterns = [
+
     path('admin/', admin.site.urls),
     path('adminlist/', admin_views.showAdmin, name='Admin'),
+
     path('user/', user_views.showUser, name='User'),
     path('insertuser/', user_views.insertUser, name='insertUser'),
-    path('registration/', user_views.registration, name='registration'),
+
     path('comment/', comment_views.showComment, name='Comment'),
+
     path('post/', post_views.showPost, name='Post'),
-    path('accounts/', include('django.contrib.auth.urls'))
+    path('insertpost/', post_views.insertPost, name='insertPost'),
+
+    path('registration/', user_views.registration, name='registration'),
+    path('registration/', post_views.registration, name='registration'),
+
+    path('accounts/', include('django.contrib.auth.urls')),
+
+
 
 
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
