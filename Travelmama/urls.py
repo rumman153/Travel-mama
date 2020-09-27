@@ -16,6 +16,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path,include
 from django.conf import settings
+from django.conf.urls.static import static
 
 from AdminManagement import views as admin_views
 from UserManagement import views as user_views
@@ -33,4 +34,5 @@ urlpatterns = [
     path('post/', post_views.showPost, name='Post'),
     path('accounts/', include('django.contrib.auth.urls'))
 
-]
+
+]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

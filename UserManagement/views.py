@@ -16,7 +16,7 @@ def registration(request):
     form = UserCreationForm()
 
     if request.method == 'POST':
-        form = UserCreationForm(request.POST)
+        form = UserCreationForm(request.POST,request.FILES)
         if form.is_valid():
             form.save()
 
@@ -32,7 +32,7 @@ def insertUser(request):
     form = UserForm()
 
     if request.method == "POST":
-        form = UserForm(request.POST,)
+        form = UserForm(request.POST,request.FILES)
         message = "you are wrong!!!!!"
         if form.is_valid():
             form.save()

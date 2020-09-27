@@ -1,5 +1,7 @@
 {% extends 'base.html' %}
 
+{% load static %}
+
 {% block content %}
 
     {% for u in User %}
@@ -7,6 +9,8 @@
         {{ u.User_name }} <br>
         {{ u.User_email}} <br>
         {{ u.Gender}} <br>
+        <img src="{{ u.User_profile.url }}" width="300" height="300" alt="image"> <br>
+        <a href="{{ u.constitution.url }}">View Constitution</a> <br>
 
 
     {% endfor %}
