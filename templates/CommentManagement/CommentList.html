@@ -1,13 +1,12 @@
+ {% extends 'base.html' %}
 
-{% extends 'base.html' %}
+{% load static %}
 
 {% block content %}
 
     {% for c in Comment %}
-        <h2>Comment:  {{ c.id }} </h2>
-        Name: {{ c.User.User_name }} <br>
-        Post: {{ c.Post.Post_title }} <br>
-        Comment: {{ c.Comment_description }} <br>
+        <h2>User info:  {{ c.id }} </h2>
+        {{ c.Comment_description }} <br>
 
 
     {% endfor %}

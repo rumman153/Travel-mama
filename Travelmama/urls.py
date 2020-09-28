@@ -33,12 +33,14 @@ urlpatterns = [
     path('insertuser/', user_views.insertUser, name='insertUser'),
 
     path('comment/', comment_views.showComment, name='Comment'),
+    path('insertcomment/', comment_views.insertComment, name='insertComment'),
 
     path('post/', post_views.showPost, name='Post'),
     path('insertpost/', post_views.insertPost, name='insertPost'),
 
     path('registration/', user_views.registration, name='registration'),
     path('registration/', post_views.registration, name='registration'),
+    path('registration/', comment_views.registration, name='registration'),
 
     path('accounts/', include('django.contrib.auth.urls')),
 

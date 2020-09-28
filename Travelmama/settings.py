@@ -128,6 +128,7 @@ STATIC_URL = '/static/'
 
 LOGIN_REDIRECT_URL = 'User'
 LOGIN_REDIRECT_URL = 'Post'
+LOGIN_REDIRECT_URL = 'Comment'
 
 
 LOGOUT_REDIRECT_URL = 'login'
