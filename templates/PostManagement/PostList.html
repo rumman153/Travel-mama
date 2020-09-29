@@ -3,19 +3,65 @@
 {% load static %}
 
 {% block content %}
+    <h2>Post information </h2>
+    <table border="1">
+        <tr>
+            <th>
+                Post ID
+            </th>
+            <th>
+                Post Title
+            </th>
+            <th>
+                User Name
+            </th>
+            <th>
+                Location
+            </th>
+            <th>
+                Post Catagory
+            </th>
+            <th>
+                Tags
+            </th>
+            <th>
+                Image
+            </th>
+            <th>
+                Description
+            </th>
+        </tr>
 
     {% for p in Post %}
-        <h2>Post info:  {{ p.id }} </h2>
-        Post Name: {{ p.Post_title }} <br>
-        Post By: {{ p.User.User_name }} <br>
-        Location: {{ p.Post_location}} <br>
-        Post Category: {{ p.Post_catagory}} <br>
-        Post Tags:{{ p.Post_tags}} <br>
-        Post Image(Optional): <img src="{{ p.Post_image.url }}" width="800" height="500" alt="image"> <br>
-        Post Description: {{ p.Post_description}} <br>
+        <tr>
+            <td>
+                {{ p.id }}
+            </td>
+            <td>
+                {{ p.Post_title }}
+            </td>
+            <td>
+                {{ p.User.User_name }}
+            </td>
+            <td>
+                {{ p.Post_location}}
+            </td>
+            <td>
+                {{ p.Post_catagory}}
+            </td>
+            <td>
+                {{ p.Post_tags}}
+            </td>
+            <td>
+                <img src="{{ p.Post_image.url }}" width="300" height="200" alt="image">
+            </td>
+            <td>
+                {{ p.Post_description}}
+            </td>
+        </tr>
 
 
-
+    </table>
 
 
     {% endfor %}
