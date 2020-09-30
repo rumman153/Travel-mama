@@ -1,5 +1,5 @@
 from django.db import models
-from UserManagement.models import User
+
 
 # Create your models here.
 class Post(models.Model):
@@ -18,10 +18,6 @@ class Post(models.Model):
     #Post_image3 = models.ImageField(null='true',blank='true')
     #Post_description3 = models.TextField(max_length=100000, null='true',blank='true')
 
-
-
-
-    User = models.ForeignKey(User, on_delete=models.CASCADE,null='true')
 
     def __str__(self):
         return self.Post_title

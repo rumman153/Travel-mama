@@ -1,0 +1,60 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+
+
+<h2>User information List</h2>
+    <table border="2">
+
+              <tr>
+
+                <th>
+                    User Id
+                </th>
+                <th>
+                    User Full Name
+                </th>
+                <th>
+                    User E-mail
+                </th>
+                <th>
+                    User Gender
+                </th>
+                <th>
+                    User Profile Picture
+                </th>
+                <th>
+                    Link
+                </th>
+
+              </tr>
+
+              <tr>
+                <td>
+                    {{ Profile.id }}
+                </td>
+                <td>
+                    {{ Profile.User_Full_name }}
+                </td>
+                <td>
+                    {{ Profile.User_email}}
+                </td>
+                <td>
+                    {{ Profile.Gender }}
+                </td>
+                <td>
+                    <img src="{{ Profile.User_profile_picture.url }}" width="200" height="200" alt="image">
+                </td>
+                <td>
+                    <a href="{{ Profile.constitution.url }}">View Constitution</a> <br>
+                </td>
+              </tr>
+
+
+
+    </table>
+
+
+
+{% endblock content %}
