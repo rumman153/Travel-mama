@@ -19,7 +19,7 @@ from django.conf import settings
 from django.conf.urls.static import static
 
 from AdminManagement import views as admin_views
-from UserManagement import views as user_views
+from UserManagement import views as profile_views
 from CommentManagement import views as comment_views
 from PostManagement import views as post_views
 
@@ -28,8 +28,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('adminlist/', admin_views.showAdmin, name='Admin'),
 
-    path('user/', user_views.showUser, name='User'),
-    path('insertuser/', user_views.insertUser, name='insertUser'),
+#    path('insertuser/', user_views.insertUser, name='insertUser'),
 
     path('comment/', comment_views.showComment, name='Comment'),
     path('insertcomment/', comment_views.insertComment, name='insertComment'),
@@ -37,14 +36,14 @@ urlpatterns = [
     path('post/', post_views.showPost, name='Post'),
     path('insertpost/', post_views.insertPost, name='insertPost'),
 
-    path('registration/', user_views.registration, name='registration'),
+    path('registration/', profile_views.registration, name='registration'),
     path('registration/', post_views.registration, name='registration'),
     path('registration/', comment_views.registration, name='registration'),
     path('registration/', admin_views.registration, name='registration'),
 
-    path('profile/', user_views.showProfile, name='profile'),
+    path('profile/', profile_views.showProfile, name='profile'),
 
-    path('createProfile/', user_views.createProfile, name='createProfile'),
+    path('createProfile/', profile_views.createProfile, name='createProfile'),
 
     path('accounts/', include('django.contrib.auth.urls')),
 

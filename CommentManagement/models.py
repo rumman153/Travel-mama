@@ -1,6 +1,7 @@
 from django.db import models
 from PostManagement.models import Post
 from django.contrib.auth.models import User
+#from UserManagement.models import Profile
 
 
 # Create your models here.

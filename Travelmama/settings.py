@@ -127,7 +127,7 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-LOGIN_REDIRECT_URL = 'User'
+LOGIN_REDIRECT_URL = 'Profile'
 LOGIN_REDIRECT_URL = 'Post'
 LOGIN_REDIRECT_URL = 'Comment'
 

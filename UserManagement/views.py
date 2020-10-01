@@ -1,16 +1,10 @@
 from django.shortcuts import render
-from .models import User
-from .forms import UserForm
+from .models import Profile
+from .forms import ProfileForm
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.forms import UserCreationForm
 
 
-def showUser(request):
-    UserList = User.objects.all()
-    context = {
-        'User': UserList
-    }
-    return render(request, 'UserManagement/UserList.html', context)
 
 def registration(request):
     form = UserCreationForm()
@@ -29,15 +23,15 @@ def registration(request):
 @login_required
 def insertUser(request):
     message = ""
-    form = UserForm()
+    form = ProfileForm()
 
     if request.method == "POST":
-        form = UserForm(request.POST,request.FILES)
+        form = ProfileForm(request.POST,request.FILES)
         message = "you are wrong!!!!!"
         if form.is_valid():
             form.save()
             message = "Success..."
-            form = UserForm()
+            form = ProfileForm()
 
     context = {
         'form' : form,
@@ -48,22 +42,22 @@ def insertUser(request):
 @login_required
 def showProfile(request):
     try:
-        ProfileList = User.objects.get(user=request.user)
-    except ProfileList.DoesNotExist:
+        ProfileList = Profile.objects.get(user=request.user)
+    except Profile.DoesNotExist:
         profile = "Please complete your profile to view"
 
     context = {
-        'Profile': ProfileList
+        'Profile': Profile
     }
     return render(request, 'UserManagement/viewProfile.html', context)
 
 @login_required
 def createProfile(request):
     message = ""
-    form =UserForm()
+    form =ProfileForm()
 
     if request.method == "POST":
-        form = UserForm(request.POST,request.FILES)
+        form = ProfileForm(request.POST,request.FILES)
         message = "you are wrong!!!!!"
         if form.is_valid():
 
@@ -72,7 +66,7 @@ def createProfile(request):
             profile.save()
 
             message = "Profile Update Successfully..."
-            form = UserForm()
+            form = ProfileForm()
 
     context = {
         'form' : form,

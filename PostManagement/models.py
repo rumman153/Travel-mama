@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
+from CommentManagement.models import Comment
 
 
 # Create your models here.
