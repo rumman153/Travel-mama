@@ -49,8 +49,9 @@ def insertUser(request):
 def showProfile(request):
     try:
         ProfileList = User.objects.get(user=request.user)
-    except User.DoesNotExist:
+    except ProfileList.DoesNotExist:
         profile = "Please complete your profile to view"
+
     context = {
         'Profile': ProfileList
     }
