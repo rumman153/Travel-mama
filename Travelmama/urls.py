@@ -22,8 +22,6 @@ from AdminManagement import views as admin_views
 from UserManagement import views as user_views
 from CommentManagement import views as comment_views
 from PostManagement import views as post_views
-from ProfileManagement import views as profile_views
-
 
 urlpatterns = [
 
@@ -43,13 +41,11 @@ urlpatterns = [
     path('registration/', post_views.registration, name='registration'),
     path('registration/', comment_views.registration, name='registration'),
     path('registration/', admin_views.registration, name='registration'),
-    path('registration/', profile_views.registration, name='registration'),
 
-    path('profile/', profile_views.showProfile, name='profile'),
-    path('createProfile/', profile_views.createProfile, name='createProfile'),
+    path('profile/', user_views.showProfile, name='profile'),
+    path('createProfile/', user_views.createProfile, name='createProfile'),
 
     path('accounts/', include('django.contrib.auth.urls')),
-
 
 
 

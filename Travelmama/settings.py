@@ -42,7 +42,7 @@ INSTALLED_APPS = [
     'UserManagement.apps.UsermanagementConfig',
     'CommentManagement.apps.CommentmanagementConfig',
     'PostManagement.apps.PostmanagementConfig',
-    'ProfileManagement.apps.ProfilemanagementConfig'
+
 
 ]
 
