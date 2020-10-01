@@ -15,13 +15,36 @@ This is the base template
 
 {#<a href="{% url 'User' %}">User List</a><br>#}
 {#<a href="{% url 'insertUser' %}">Insert User</a><br>#}
-<a href="{% url 'Post' %}">Post List</a><br>
-<a href="{% url 'insertPost' %}">Insert Post</a><br>
-<a href="{% url 'Comment' %}">Comment List</a><br>
-<a href="{% url 'insertComment' %}">Insert Comment</a><br>
-<a href="{% url 'Admin' %}">Admin List</a><br>
-<a href="{% url 'profile' %}">profile</a><br>
-<a href="{% url 'createProfile' %}">create profile</a><br>
+{#<a href="{% url 'Post' %}">Post List</a><br>#}
+{#<a href="{% url 'insertPost' %}">Insert Post</a><br>#}
+{#<a href="{% url 'Comment' %}">Comment List</a><br>#}
+{#<a href="{% url 'insertComment' %}">Insert Comment</a><br>#}
+{#<a href="{% url 'Admin' %}">Admin List</a><br>#}
+{#<a href="{% url 'profile' %}">profile</a><br>#}
+{#<a href="{% url 'createProfile' %}">create profile</a><br>#}
+
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">Travel Mama</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="navbar-nav">
+{#      <a class="nav-link active" href="{% url 'profile' %}">Home<span class="sr-only">(current)</span></a>#}
+
+      <a class="nav-link" href="{% url 'insertPost' %}">Insert Post</a>
+      <a class="nav-link" href="{% url 'Post' %}">Post List</a>
+      <a class="nav-link" href="{% url 'Comment' %}">Comment List</a>
+      <a class="nav-link" href="{% url 'insertComment' %}">Insert Comment</a>
+      <a class="nav-link" href="{% url 'Admin' %}">Admin List</a>
+      <a class="nav-link" href="{% url 'profile' %}">profile</a>
+      <a class="nav-link" href="{% url 'createProfile' %}">create profile</a>
+    </div>
+</nav>
+
+
+
 
 
 
